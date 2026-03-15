@@ -1,0 +1,25 @@
+name = "my-bot-guard"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+[[kv_namespaces]]
+binding = "ANALYTICS"
+id = "your-kv-namespace-id"
+
+[vars]
+BLOG_DOMAIN = "blog.yourdomain.com"
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
